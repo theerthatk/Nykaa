@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nykaa</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    .sticky-navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+
+    }
+
+    .sticky-header {
+        position: sticky;
+        top: 56px;
+        z-index: 1010;
+        box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-small-screen {
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+
+    }
+
+    .offer {
+        background-color: #e80071;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .offer:hover {
+        background-color: #ff66cc;
+    }
+
+
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        mask-size: 30px 30px;
+
+
+
+    }
+
+
+    .li-links {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .li-links:hover {
+        color: rgb(232, 0, 113);
+    }
+
+    .n-link {
+        color: rgb(255, 255, 255);
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        text-decoration: none;
+        padding: .5rem 1rem;
+        cursor: pointer;
+
+    }
+
+
+
+
+
+    /* General styles for smaller screens */
+    @media (max-width: 992px) {
+        .sticky-header {
+            display: none;
+        }
+
+        .sticky-navbar {
+            display: none;
+        }
+
+        .navbar-3 {
+            display: none;
+        }
+
+        .navbar-small-screen {
+            display: block;
+        }
+    }
+
+    /* Styles specifically for screens around 1024px */
+    @media (min-width: 993px) and (max-width: 1024px) {
+        .sticky-header {
+            display: block;
+        }
+
+        .sticky-navbar {
+            display: block;
+        }
+
+        .navbar-3 {
+            display: none;
+        }
+
+        .navbar-small-screen {
+            display: none;
+        }
+
+        .c1 {
+            display: none;
+        }
+    }
+
+    /* General styles for larger screens */
+    @media (min-width: 1025px) {
+        .sticky-header {
+            display: block;
+        }
+
+        .sticky-navbar {
+            display: block;
+        }
+
+        .navbar-3 {
+            display: block;
+        }
+
+        .navbar-small-screen {
+            display: none;
+        }
+
+    }
+
+    /*  */
+    @media (max-width: 767.98px) {
+        #carouselExample1 .carousel-inner {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+
+        #carouselExample1 .carousel-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #carouselExample1 .carousel-item.active {
+            display: block;
+        }
+
+        #carouselExample1 .carousel-control-prev,
+        #carouselExample1 .carousel-control-next {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <!-- NAVBAR 1 -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-navbar"
+        style="background-image: url('./images/common-strip.avif'); background-size: cover;">
+        <div class="container-fluid justify-content-center justify-content-md-between">
+            <ul class="navbar-nav flex-row">
+                <li class="nav-item ms-5 me-lg-0 d-none d-md-inline-block text-white">
+                    <p class="anime">BEAUTY BONANZA Get Your Amazing Deals!</p>
+                </li>
+            </ul>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+                <ul class="navbar-nav flex-row">
+                    <li class="nav-item me-4">
+                        <a href="#" class="nav-link text-white">
+                            <i class="fa-solid fa-mobile-screen-button" style="font-size: 22px;"></i>
+                            <span class="text">Get App</span>
+                            <span class="border-end ms-3"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a href="#" class="nav-link text-white">
+                            <i class="fa-solid fa-location-dot" style="font-size: 22px;"></i>
+                            <span class="text">Store & Events</span>
+                            <span class="border-end ms-3"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a href="#" class="nav-link text-white">
+                            <i class="fa-solid fa-gift" style="font-size: 22px;"></i>
+                            <span class="text">Gift Card</span>
+                            <span class="border-end ms-3"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item me-5 pe-5">
+                        <a href="#" class="nav-link text-white">
+                            <i class="fa-solid fa-circle-question" style="font-size: 22px;"></i>
+                            <span class="text">Help</span>
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        </div>
+    </nav>
+
+    <!-- NAVBAR 2 -->
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-header bg-white shadow-bottom">
+        <div class="container justify-content-center justify-content-md-between">
+            <ul class="navbar-nav flex-row align-items-center">
+                <li class="nav-item me-2 me-lg-0 d-none d-md-inline-block">
+                    <a href="#!" class="ms-md-2">
+                        <img src="./images/download.jpeg" height="65" />
+                    </a>
+                </li>
+                <li><a class="nav-item" href="#">Categories</a></li>
+                <li><a class="nav-item" href="#">Brands</a></li>
+                <li><a class="nav-item" href="#">Luxe</a></li>
+                <li><a class="nav-item" href="#">Nykaa Fashion</a></li>
+                <li><a class="nav-item" href="#">Beauty Advice</a></li>
+            </ul>
+
+            <div class="col-md-4 ms-auto  ">
+                <form class="d-flex" role="search">
+                    <div class="input-group " style="width: auto;">
+                        <input class="form-control border border-end-0" type="search" placeholder="Search on Nykaa"
+                            aria-label="Search">
+                        <button class="btn border border-start-0" type="submit">
+                            <i class="fas fa-search "></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <button class="btn  me-5" type="button"
+                style="background-color: #e80071; color: white;  margin-left: -50px;">
+                Sign In
+            </button>
+
+            <i class="fa-solid fa-bag-shopping" style="font-size: 22px; "></i>
+        </div>
+    </nav>
+
+    <!-- NAVBAR 3 -->
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light  navbar-3">
+        <div class="container  justify-content-center justify-content-md-between">
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Makeup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Skin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hair</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Appliances</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bath & Body</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Natural</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mom & Baby</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Health & Wellness</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Fragrance</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn offer">Offers</button>
+        </div>
+    </nav>
+
+    <!--For smaller Screen  -->
+    <nav class="navbar bg-white navbar-small-screen ">
+        <div class="container-fluid">
+            <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+                aria-controls="staticBackdrop">
+                <i class="fa-solid fa-bars fa-xl"></i>
+            </button>
+
+            <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+                aria-labelledby="staticBackdropLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="staticBackdropLabel"><img src="./images/download.jpeg" style="height: 80px; width: 100%;"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div><img src="./images/Loginbanner-specificnew.avif" style="height: 100px; width: 100%;"></div>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Brands</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Luxe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Nykaa Fashion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Beauty Advice</a>
+                        </li>
+                     
+                    </ul>
+
+                        <div class="container "><img src="./images/offcanvas.avif" style="height: 100px; width:100%; "></div>
+
+                </div>
+            </div>
+            <a class="navbar-brand"> <img src="./images/download.jpeg" height="50" /></a>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search for Nykaa" aria-label="Search">
+                <button class="btn btn-outline-dark" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </nav>
+
+
+    <!-- CAROUSAL 1 -->
+
+    <div id="carouselExample" class="carousel carousel-dark slide" style="border-radius: 10px;">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="image-wrapper">
+                            <img src="./images/c1a.webp" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image-wrapper wrap">
+                            <img src="./images/c1b.avif" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image-wrapper wrap">
+                            <img src="./images/c1c.avif" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="image-wrapper">
+                            <img src="./images/col2a.avif" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image-wrapper wrap">
+                            <img src="./images/col2b.avif" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image-wrapper wrap">
+                            <img src="./images/col2c.avif" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+
+            <div class="carousel-item small">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="image-wrapper">
+                            <img src="/images/c1b.avif" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image-wrapper wrap">
+                            <img src="./images/default.avif" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image-wrapper wrap">
+                            <img src="./images/col2c.avif" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#carouselExample"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon prev" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next custom-carousel-control mt-auto" type="button"
+        data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon next" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+
+    </div>
+    <!-- IMAGE CONATINER -->
+    <div class=" container mt-2 mb-4" style="border-radius: 10px;">
+        <img src="./images/n1.webp" class="msg">
+    </div>
+    <!-- CARD CAROUSAL2  HEADING -->
+    <div class="container-fluid bg-light mb-4">
+        <div class="container-fluid">
+            <div class="heading1">
+                <img src="./images/ny0.avif" alt="">
+            </div>
+            <!-- CARD CAROUSAL2-->
+            <div id="carouselExample1" class="carousel carousel-dark slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="./images/ny11.avif" class="card-img-top" alt="...">
+                                <h5 class="card-title card-text mb-5">Charlotte's Gifting Universe </h5>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./images/ny2.avif" class="card-img-top" alt="...">
+                                <h5 class="card-title card-text mb-5">Free Bestseller Mini on ₹599</h5>
+
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./images/ny3.avif" class="card-img-top" alt="...">
+                                <h5 class="card-title card-text mb-5">Upto 15% Off </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="./images/ny4.avif" class="card-img-top" alt="...">
+                                <h5 class="card-title card-text mb-5">Upto 25% Of</h5>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./images/ny5.avif" class="card-img-top" alt="...">
+                                <h5 class="card-title card-text mb-5">With Wheat Protein</h5>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./images/ny6.avif" class="card-img-top" alt="...">
+                                <h5 class="card-title card-text mb-5">Free Full Size Gift </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev " type="button" data-bs-target="#carouselExample1"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next " type="button" data-bs-target="#carouselExample1"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- BANNER 1 -->
+
+        <div>
+            <img src="./images/banner1.webp" class="banner">
+        </div>
+
+        <!-- CIRCLE IMG CARDS -->
+
+        <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-2">
+                                <img src="./images/r1.avif" class="img-fluid" alt="Image 1">
+                            </div>
+                            <div class="col-2">
+                                <img src="./images/r2.avif" class="img-fluid" alt="Image 2">
+                            </div>
+                            <div class="col-2">
+                                <img src="./images/r3.avif" class="img-fluid" alt="Image 3">
+                            </div>
+                            <div class="col-2">
+                                <img src="./images/r4.avif" class="img-fluid" alt="Image 4">
+                            </div>
+                            <div class="col-2">
+                                <img src="./images/r5.avif" class="img-fluid" alt="Image 5">
+                            </div>
+                            <div class="col-2">
+                                <img src="./images/r6.avif" class="img-fluid" alt="Image 6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-2">
+                                <img src="./images/r7.avif" class="img-fluid" alt="Image 7">
+                            </div>
+                            <div class="col-2">
+                                <img src="./images/r8.avif" class="img-fluid" alt="Image 8">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#imageCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#imageCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!--BANNER 2  -->
+        <div>
+            <img src="./images/banner 2.avif" class="banner">
+        </div>
+        <div class="carousel-bg">
+            <p class="txt t1">Up To 20% </p>
+            <p class="txt t2">On Entire Range!</p>
+            <div id="imageCarousel1" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container-fluid">
+                            <div class="row d-flex flex-nowrap overflow-auto">
+                                <div class="col-6 col-md-2">
+                                    <img src="./images/img1.avif" class="img-fluid" alt="Image 1">
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <img src="./images/img2.avif" class="img-fluid" alt="Image 2">
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <img src="./images/img3.avif" class="img-fluid" alt="Image 3">
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <img src="./images/img4.avif" class="img-fluid" alt="Image 4">
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <img src="./images/img5.avif" class="img-fluid" alt="Image 5">
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <img src="./images/img6.avif" class="img-fluid" alt="Image 6">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container-fluid">
+                            <div class="row d-flex flex-nowrap overflow-auto">
+                                <div class="col-6 col-md-2">
+                                    <img src="./images/img7.avif" class="img-fluid" alt="Image 7">
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <img src="./images/img8.avif" class="img-fluid" alt="Image 8">
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <img src="./images/img9.avif" class="img-fluid" alt="Image 8">
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <img src="./images/img10.avif" class="img-fluid" alt="Image 8">
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <img src="./images/img11.avif" class="img-fluid" alt="Image 8">
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <img src="./images/img12.avif" class="img-fluid" alt="Image 8">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#imageCarousel1"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#imageCarousel1"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- CARD CAROUSAL 3  HEADING -->
+        <div class="container-fluid bg-light mb-4 mt-4">
+            <div class="container-fluid">
+                <div class="heading1">
+                    <img src="./images/heading3.avif" alt="">
+                </div>
+                <!-- CARD CAROUSAL  3-->
+                <div id="carouselExample3" class="carousel carousel-dark slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="./images/d1.avif" class="card-img-top" alt="...">
+                                    <h5 class="card-title card-text mb-5">Charlotte's Gifting Universe </h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="./images/d2.avif" class="card-img-top" alt="...">
+                                    <h5 class="card-title card-text mb-5">Free Bestseller Mini on ₹599</h5>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="./images/d3.avif" class="card-img-top" alt="...">
+                                    <h5 class="card-title card-text mb-5">Upto 15% Off </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="./images/d4.avif" class="card-img-top" alt="...">
+                                    <h5 class="card-title card-text mb-5">Upto 25% Of</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="./images/d2.avif" class="card-img-top" alt="...">
+                                    <h5 class="card-title card-text mb-5">Free Bestseller Mini on ₹599</h5>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="./images/d3.avif" class="card-img-top" alt="...">
+                                    <h5 class="card-title card-text mb-5">Upto 15% Off </h5>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <button class="carousel-control-prev " type="button" data-bs-target="#carouselExample3"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next " type="button" data-bs-target="#carouselExample3"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- HEADING 4 -->
+            <div>
+                <img src="./images/heading4.avif" class="banner">
+            </div>
+
+            <!--   IMAGE CAROUSAL -->
+
+
+            <div id="imageCarousel4" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img src="./images/f1.avif" class="img-fluid" alt="Image 1">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./images/f2.avif" class="img-fluid" alt="Image 2">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./images/f7.avif" class="img-fluid" alt="Image 3">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./images/f4.avif" class="img-fluid" alt="Image 4">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./images/f5.avif" class="img-fluid" alt="Image 5">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./images/f6.avif" class="img-fluid" alt="Image 6">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img src="./images/f9.avif" class="img-fluid" alt="Image 7">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./images/f8.avif" class="img-fluid" alt="Image 8">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./images/f10.avif" class="img-fluid" alt="Image 8">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./images/f4.avif" class="img-fluid" alt="Image 8">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./images/f6.avif" class="img-fluid" alt="Image 8">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./images/f7.avif" class="img-fluid" alt="Image 8">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#imageCarousel4"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#imageCarousel4"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+
+            <!-- CARD CAROUSAL  5-->
+            <div id="carouselExample5" class="carousel carousel-dark slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="./images/g1.avif" class="card-img-top" alt="...">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./images/g2.avif" class="card-img-top" alt="...">
+
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./images/g3.avif" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="./images/g3.avif" class="card-img-top" alt="...">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./images/g4.avif" class="card-img-top" alt="...">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./images/g5.avif" class="card-img-top" alt="...">
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev " type="button" data-bs-target="#carouselExample5"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next " type="button" data-bs-target="#carouselExample5"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- BUTTON -->
+
+        <div>
+            <img src="./images/button.avif" class="banner">
+        </div>
+
+        <!-- HEADING 6 -->
+
+        <div><img src="./images/heading5.avif" class="banner"></div>
+
+        <!-- ANOTHER CAROUSAL -->
+        <div id="imageCarousel6" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container-fluid">
+                        <div class="row d-flex flex-nowrap overflow-auto">
+                            <div class="col-6 col-md-2">
+                                <img src="./images/i1.avif" class="img-fluid" alt="Image 1">
+                            </div>
+                            <div class="col-6 col-md-2">
+                                <img src="./images/i2.avif" class="img-fluid" alt="Image 2">
+                            </div>
+                            <div class="col-6 col-md-2">
+                                <img src="./images/i3.avif" class="img-fluid" alt="Image 3">
+                            </div>
+                            <div class="col-6 col-md-2">
+                                <img src="./images/i4.avif" class="img-fluid" alt="Image 4">
+                            </div>
+                            <div class="col-6 col-md-2">
+                                <img src="./images/i5.avif" class="img-fluid" alt="Image 5">
+                            </div>
+                            <div class="col-6 col-md-2">
+                                <img src="./images/i6.avif" class="img-fluid" alt="Image 6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container-fluid">
+                        <div class="row d-flex flex-nowrap overflow-auto">
+                            <div class="col-6 col-md-2">
+                                <img src="./images/i7.avif" class="img-fluid" alt="Image 7">
+                            </div>
+                            <div class="col-6 col-md-2">
+                                <img src="./images/i8.avif" class="img-fluid" alt="Image 8">
+                            </div>
+                            <div class="col-6 col-md-2">
+                                <img src="./images/i9.avif" class="img-fluid" alt="Image 8">
+                            </div>
+                            <div class="col-6 col-md-2">
+                                <img src="./images/i10.avif" class="img-fluid" alt="Image 8">
+                            </div>
+                            <div class="col-6 col-md-2">
+                                <img src="./images/i11.avif" class="img-fluid" alt="Image 8">
+                            </div>
+                            <div class="col-6 col-md-2">
+                                <img src="./images/i12.avif" class="img-fluid" alt="Image 8">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#imageCarouse6"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#imageCarousel6"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- HEADING 5 -->
+
+    <div><img src="./images/heading5.avif" class="banner"></div>
+
+    <!-- CARD -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 mt-2"><img src="./images/gift1.avif" class="banner" alt="Gift 1"></div>
+            <div class="col-12 col-md-6 mt-2"><img src="./images/gift2.avif" class="banner" alt="Gift 2"></div>
+        </div>
+    </div>
+    <!-- WARNING BOX -->
+    <div class="container mt-5">
+        <img src="./images/message.avif" class="msg" alt="">
+    </div>
+
+
+    <!-- last writing -->
+    <div class="container m-5">
+        <p class="p">Nykaa - The Online Beauty Store</p>
+    </div>
+
+    <!-- FOOTER -->
+    <section class="c1">
+        <footer class="text-white " style="background-color: #3a4047;">
+            <div class="container w-75 p-4">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 mb-4 mb-md-0 text-center">
+                        <h6><i class="fa-solid fa-envelope pe-2"></i>Get special discount on your inbox</h6>
+                        <form class="d-flex " role="search">
+                            <input class="form-control me-2 rounded-0 bg-transparent no-border" type="search"
+                                placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light" type="submit">Search</button>
+                        </form>
+
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-center">
+                        <h6><i class="fa-solid fa-mobile pe-2"></i>EXPERIENCE THE NYKAA MOBILE APP</h6>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+
+                            </li>
+                            <li>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-center">
+                        <h6><i class="fa-solid fa-phone pe-2"></i>FOR ANY HELP, YOU MAY CALL US AT <br>
+                            1800-267-4444</h6>
+
+                        <p>(Monday to Saturday, 8AM to 10PM and Sunday, 10AM to 7PM)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </section>
+    <!-- footer 2 -->
+
+    <div class=" c1 text-white " style="background-color: #8c8d94;">
+        <div class="container  w-75">
+            <div class="row ">
+                <div class="col-2 ms-4  ">
+                    <h5 class="mb-4 mt-5 fs-2">NYKAA</h5>
+
+                    <ul class="list-unstyled">
+                        <li><a href="" class="li-links">Who are we?</a></li>
+                        <li><a href="" class="li-links">Careers</a></li>
+                        <li><a href="" class="li-links">Authenticity</a></li>
+                        <li><a href="" class="li-links">Press</a></li>
+                        <li><a href="" class="li-links">Testimonials</a></li>
+                        <li><a href="" class="li-links">Nykaa CSR</a></li>
+                        <li><a href="" class="li-links">Responsible Disclosure</a></li>
+                        <li><a href="" class="li-links">Investor Relations</a></li>
+                        <li><a href="" class="li-links">Link to Smart ODR</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-2 ms-4">
+                    <h6 class=" mt-5 ">Help</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="" class="li-links">Contact Us</a></li>
+                        <li><a href="" class="li-links">Frequently asked questions</a></li>
+                        <li><a href="" class="li-links">Store Locator</a></li>
+                        <li><a href="" class="li-links">Cancellation & Return</a></li>
+                        <li><a href="" class="li-links">Shipping & Delivery</a></li>
+                        <li><a href="" class="li-links">Sell on Nykaa</a></li>
+
+
+                    </ul>
+                </div>
+                <div class="col-2 ms-4">
+                    <h6 class="  mb-2 mt-5 ">Inspire Me</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="" class="li-links">Beauty Book</a></li>
+                        <li><a href="" class="li-links">Nykaa Network</a></li>
+                        <li><a href="" class="li-links">Buying Guides</a></li>
+
+
+                    </ul>
+                </div>
+                <div class="col-2 ms-4">
+                    <h6 class="  mb-2 mt-5 ">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="" class="li-links">Offer Zone</a></li>
+                        <li><a href="" class="li-links">New Launches</a></li>
+                        <li><a href="" class="li-links">Nykaa Man</a></li>
+                        <li><a href="" class="li-links">Nykaa Fashion</a></li>
+                        <li><a href="" class="li-links"> Nykaa Pro</a></li>
+                        <li><a href="" class="li-links">Sitemap</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-2 ms-4">
+                    <h6 class="  mb-2 mt-5 ">Top Categories</h6>
+                    <ul class="list-unstyled mb-5">
+                        <li><a href="" class="li-links">Makeup</a></li>
+                        <li><a href="" class="li-links">Skin</a></li>
+                        <li><a href="" class="li-links">Hair</a></li>
+                        <li><a href="" class="li-links">Bath & Body</a></li>
+                        <li><a href="" class="li-links">Appliances</a></li>
+                        <li><a href="" class="li-links">Mom and Baby</a></li>
+                        <li><a href="" class="li-links">Health & Wellness</a></li>
+
+                        <li><a href="" class="li-links">Fragrance</a></li>
+                        <li><a href="" class="li-links">Natural</a></li>
+                        <li><a href="" class="li-links">Luxe</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="container c1 w-75 mt-5 ">
+        <div class="row">
+            <div class="col-2 me-4">
+                <div class="row">
+                    <div class="col-4"> <img src="./images/icon1.svg" alt=""></div>
+                    <div class="col-8">
+                        <p class="p1">FREE SHIPPING</p>
+                        <hr>
+                        <p class="p1"> On Orders Above ₹299</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 me-4">
+                <div class="row">
+                    <div class="col-4"> <img src="./images/icon2.svg" alt=""></div>
+                    <div class="col-8">
+                        <p class="p1">EASY RETURNS</p>
+                        <hr>
+                        <p class="p1"> 15-Day Return Policy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 me-4">
+                <div class="row">
+                    <div class="col-4"> <img src="./images/icon3.svg" alt=""></div>
+                    <div class="col-8">
+                        <p class="p1"> AUTHENTIC
+                        </p>
+                        <hr>
+                        <p class="p1"> Products Sourced Directly</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 me-3">
+                <div class="row">
+                    <div class="col-4"> <img src="./images/icon4.svg" alt=""></div>
+                    <div class="col-8">
+                        <p class="p1">1900+ BRANDS
+                        </p>
+                        <hr>
+                        <p class="p1"> 1.2 Lakh+ Products</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="text-center fs-6"> Show us some love ❤ on social media</div>
+                <div class="text-center">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-square-twitter"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="box c1">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="n-link active" aria-current="page" href="#">Terms & Conditions</a>
+            </li>
+            <li class="nav-item">
+                <a class="n-link" href="#">Shipping Policy</a>
+            </li>
+            <li class="nav-item">
+                <a class="n-link" href="#">Cancellation Policy</a>
+            </li>
+            <li class="nav-item">
+                <a class="n-link ">Privacy Policy</a>
+            </li>
+        </ul>
+        <div class="box1 mt-4"> © 2024 NYKAA E-RETAIL LIMITED All Rights Reserved</div>
+
+
+    </div>
+
+
+    <div class="container c1">
+        <p class="end1">Popular Links</p>
+        <p class="end2">Lipstick,Highlighter,Hair Serum,Concealer,Face Mask,Biotique,Lip Gloss,Perfume For
+            Women,Facial
+            Kit,Bb
+            Cream,Victoria Secret,Love Beauty And Planet Shampoo,Eyeliner,Hair Mask,Face Wash For Oily
+            Skin,Ordinary,Toner,Eyeshadow Palette,Cleanser,Chemist At Play,Mascara,Loreal Professional,Hair
+            Extensions,Olay Cream,Fogg,Lip Tint,Under Eye Cream,Wax Strips,Shower Gel,Sunscreen For
+            Face,Insight
+            Cosmetics,Face Foundation,Hair Removal Machine,Mac Foundation,Choker,Oud Perfume,Makeup
+            Pouch,Olaplex,Body
+            Mist,Wella Shampoo,Huda Beauty Foundation,Night Cream,Facewash,Nyx,Schwarzkopf Shampoo,Blue
+            Heaven,Peel
+            Off
+            Mask,Best Lip Balm,Face Scrub,Cetaphil Face Wash,Mederma Cream,Multivitamins Tablet,Himalaya
+            Face
+            Wash,Garnier Face Wash,Hair Color For Women,Cetaphil Moisturizers,Ponds Face Wash,Streax Hair
+            Serum,Nivea
+            Body Lotions,Vaseline Body Lotions,Sugar Lipstick,Biotin Tablet,Aqualogica Sunscreen,Salicylic
+            Acid Face
+            Wash,Fogg Perfume,Clean And Clear Face Wash,Neutrogena Sunscreen,Pears Soaps,Hair Color For
+            Men,Dry
+            Cleansers,Face Serum</p>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,308 @@
+body{
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  background-color:  #f3f3f3;
+  padding: 0;
+  box-sizing: border-box;
+}
+*{
+  margin: 0%;
+  padding: 0%;
+}
+
+
+
+
+
+
+.anime {
+  margin-left: 100px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  display: inline-block;
+  animation: slideIn 3s ease-in-out infinite;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.anime:hover {
+  color: black;
+}
+
+
+
+.nav-item {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  margin-right: 30px;
+}
+
+.nav-item:hover {
+  color: #e80071;
+}
+
+/* carousal 1 */
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  flex: 1;
+  margin: 10px;
+}
+
+
+.prev {
+  /* margin-top: 520px; */
+  margin-left: -190px;
+}
+
+.next {
+  /* margin-top: 520px; */
+  margin-left: 190px;
+}
+/*  */
+
+
+.card-text{
+  margin-top: -50px;
+  color: #001325;
+  font-size: 20px;
+  font-family: Inter;
+
+}
+
+
+/* IMAGE CONTAINER */
+
+
+.msg {
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+
+/* CONTAINER HEADING */
+
+.heading1 img {
+  width: 100%; 
+}
+
+
+/*  */
+
+.banner {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  /* object-position: left center;  */
+}
+
+.carousel-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-item img {
+  position: relative;
+  z-index: 2;
+}
+
+
+.carousel-bg{
+  background-color:#fcf2fd ;
+}
+
+.txt{
+  margin-left: 50px;
+ 
+
+}
+.t1{
+  margin-top: -50px;
+  font-size: 24px;
+  font-weight: 600;
+
+}
+.t2{
+  margin-top: -20px;
+}
+.p{
+  background-color: #ffffff;
+  color: #001325;
+  margin: 0;
+  /* padding: 0 3rem 1.25rem; */
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+}
+
+.msg {
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-item{
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  margin-right: 30px;
+}
+.nav-item:hover{
+  color:  #e80071;
+}
+.box{
+  height:100px;
+  width: 100%;
+  background-color:  rgb(232, 0, 113);
+  color: rgb(255, 255, 255);
+  border-top: 1px solid rgb(255, 255, 255);
+  text-align: center;
+  line-height: 18px;
+  padding: 16px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+.box1{
+  font-size: 13px;
+
+
+}
+.end1{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  color:  rgb(140, 141, 148);
+  margin-bottom: -10px;
+}
+
+.end2{
+  color:  rgb(140, 141, 148);
+  font-size: 14px;
+  margin-top: 15px;
+  font-weight: 400;
+
+
+}
+
+.nav-link:hover i.fa-solid {
+  color: black;
+}
+
+.nav-link:hover .text {
+  color: black;
+}
+
+.no-border{
+  border:none !important;
+
+  outline:none !important;
+  border-bottom: 1px solid  white !important;
+
+  
+}
+ input::placeholder{
+  color:gray !important;
+  opacity: 1;
+}
+
+/*  */
+
+
+.p1{
+  margin-top: -10px;
+  margin-bottom: -10px;
+  font-size: 14px;
+}
+
+
+/* Media queries for smaller and medium screens */
+@media (max-width: 768px) {
+  .card-wrapper {
+    display: block;
+}
+
+.card {
+    margin: 10px auto;
+    width: 80%;
+}
+
+.prev, .next {
+    margin-top: 20px;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+}
+.wrap{
+  display: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+}
+.card-text {
+  margin-top: -30px; 
+  font-size: 16px; 
+  text-align: left;
+  color: black; 
+  font-weight: 400;
+  
+}
+.banner {
+
+  object-position:  right center; 
+  object-fit: cover;
+}
+.txt {
+  margin-left: 0px; 
+}
+
+.t1 {
+  margin-top: 0px;
+  font-size: 15px;
+}
+
+.t2 {
+  margin-top: -10px;
+}
+.c1 {
+  display: none;
+}
+.p{
+  font-size: 18px;
+  margin-left:-30px;
+}
+}
+
+
+
